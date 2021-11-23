@@ -25,7 +25,7 @@ class SpectateTask extends Task{
         $this->plugin->taskid[$this->spectator] = $this->getTaskId();
         if($player !== null and $spectator !== null){
             $spectator->setGamemode(3);
-            $spectator->teleport(new Vector3($player->getX(), $player->getY(), $player->getZ(), $player->getYaw(), $player->getPitch()));
+            $spectator->teleport(new Vector3($player->getX(), $player->getY(), $player->getZ()),$player->getYaw(), $player->getPitch());
         }
 
     }
